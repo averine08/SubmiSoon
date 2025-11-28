@@ -1,0 +1,40 @@
+STUDENT
+- StudentId (PK)
+- Name
+- Email
+- PasswordHash
+
+ASSESSMENT
+- AssessmentId (PK)
+- Title
+- Description
+- TotalQuestions
+
+QUESTION
+- QuestionId (PK)
+- AssessmentId (FK)
+- Type (essay/mcq/upload)
+- Text
+- Options (json)        <-- hanya untuk mcq
+- CorrectAnswer (null untuk essay/upload)
+
+ATTEMPT
+- AttemptId (PK)
+- StudentId (FK)
+- AssessmentId (FK)
+- Status (Draft / On Review / Completed)
+- CreatedAt
+- UpdatedAt
+
+ANSWER
+- AnswerId (PK)
+- AttemptId (FK)
+- QuestionId (FK)
+- EssayText
+- ChosenOption
+- FilePath
+
+LEADERBOARD_VIEW (materialized view / query)
+- StudentId
+- Name
+- CompletedCount
