@@ -1,3 +1,4 @@
+# How to run SubmiSoon 
 1. Install .NET SDK (versi 8), Node.js LTS (Latest) , dan SQL Server(using SSMS)
 
 2. Clone/Extract project ini
@@ -15,3 +16,5 @@
   Note: can downgrade npm version locally by run "npm install npm@10 --save-dev" on the project folder
 - change baseURL in axios.ts to http URL backend
 - Run ```npm run dev```
+
+
